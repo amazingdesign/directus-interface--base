@@ -1,10 +1,12 @@
-import InterfaceComponent from './Main.vue';
+import Main from './Main.vue'
 
-export default {
-	id: 'custom',
-	name: 'Custom',
-	description: 'This is my custom interface!',
-	icon: 'box',
-	component: InterfaceComponent,
-	types: ['string'],
-};
+const ExtensionDefinition = {
+  id: 'custom',
+  name: 'Custom',
+  description: 'This is my custom extension!',
+  icon: 'box',
+  component: Main,
+  types: ['string'],
+}
+
+export default ExtensionDefinition

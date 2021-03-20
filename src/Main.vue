@@ -1,27 +1,30 @@
+<!-- eslint-disable vue/no-mutating-props -->
 <template>
-<div>
-	<div>AD Custom Interface!</div>
-	<!-- Expects type string -->
-	<input v-model="value" @input="handleChange" />
-</div>
+  <div>
+    <div>AD Custom Interface!</div>
+    <input
+      v-model="value"
+      @input="handleChange"
+    >
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-	props: {
-		value: String,
-	},
-	methods: {
-		handleChange() {
+  props: {
+    value: {
+      default: '',
+      type: String,
+    },
+  },
+  methods: {
+    handleChange() {
       const hello: string = 'Hello!'
       console.log(hello)
-			this.$emit(
-       'input',
-        this.value
-      )
-		},
-	},
+      this.$emit('input', this.value)
+    },
+  },
 })
 </script>
