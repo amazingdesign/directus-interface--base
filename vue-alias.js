@@ -1,3 +1,3 @@
 export default {
-  extend: (component) => component
+  extend: (component) => component,
 }

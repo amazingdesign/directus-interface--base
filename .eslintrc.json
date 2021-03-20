@@ -11,7 +11,8 @@
     "dist",
     "build",
     "public",
-    "rollup.config.js"
+    "rollup.config.js",
+    "vue-alias.js"
   ],
   "extends": ["eslint:recommended", "react-app", "plugin:vue/recommended"],
   "parser": "vue-eslint-parser",

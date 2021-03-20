@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import vue from 'rollup-plugin-vue';
 import typescript from 'rollup-plugin-typescript2';
 import alias from '@rollup/plugin-alias';
+import replace from '@rollup/plugin-replace';
 
 export default {
 	input: 'src/index.ts',
@@ -17,6 +18,9 @@ export default {
       entries: [
         { find: 'vue', replacement: './vue-alias.js' },
       ]
+    }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify( 'development' )
     }),
     terser(),
     resolve(),
