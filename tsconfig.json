@@ -1,20 +1,38 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "es2015",
-    "lib": ["dom", "es2020"],
-    "declaration": true,
-    "removeComments": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true,
-    "rootDir": "src",
+    "target": "es5",
+    "module": "esnext",
     "strict": true,
-    "noImplicitThis": true,
+    "jsx": "preserve",
+    "importHelpers": true,
     "moduleResolution": "node",
-    "typeRoots": ["src/shims-tsx.d.ts", "src/shims-vue.d.ts"]
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": [
+      "webpack-env"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

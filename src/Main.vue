@@ -1,6 +1,6 @@
 <template>
 <div>
-	<div>AD Custom Interface</div>
+	<div>AD Custom Interface!</div>
 	<!-- Expects type string -->
 	<input v-model="value" @input="handleChange" />
 </div>

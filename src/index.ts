@@ -1,4 +1,4 @@
-import InterfaceComponent from './interface.vue';
+import InterfaceComponent from './Main.vue';
 
 export default {
 	id: 'custom',
